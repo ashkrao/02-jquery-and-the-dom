@@ -34,9 +34,9 @@ Article.prototype.toHtml = function() {
     3. article title,
     4. article body, and
     5. publication date. */
-  $newArticle.find('.Byline a').html(this.author);
-  $newArticle.find('.Byline a').attr('href', this.authorUrl);
-  $newArticle.find('#articles h1').html(this.title);
+  $newArticle.find('.byline a').html(this.author);
+  $newArticle.find('.byline a').attr('href', this.authorUrl);
+  $newArticle.find(' h1:first').html(this.title);
   $newArticle.find('.article-body').html(this.body);
   $newArticle.find('time[pubdate]').attr('datetime', this.publishedOn);
 
